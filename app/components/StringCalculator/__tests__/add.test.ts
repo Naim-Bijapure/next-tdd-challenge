@@ -26,4 +26,12 @@ describe("String Calculator:add", () => {
     it("should support different delimiters", async () => {
         expect(await add("//;\n1;2")).toBe(3);
     });
+
+    it("should throws an exception for negative numbers", async () => {
+        await expect(add("1,-2,3")).rejects.toThrow("negatives not allowed: -2");
+    });
+
+    it("should throw an exception for multiple negative numbers", async () => {
+        await expect(add("1,-2,-45")).rejects.toThrow("negatives not allowed: -2, -45");
+    });
 });
