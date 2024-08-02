@@ -3,7 +3,16 @@
 export async function add(input: string): Promise<number> {
     // on false input value
     if (!input) return 0;
-    const numbers = extractNumbers(input.split(""));
+    // split all elements in a string
+    const splittedInput = input.split("");
+
+    // extract only numbers in the same order from splitted string array
+    const extractedNumbers = extractNumbers(splittedInput);
+
+    // perform filtering and mapping on extracted numbers
+    const numbers = extractedNumbers
+        .map((value) => (!isNaN(Number(+value)) ? +value : 0)) // ignore NaN values
+        .filter((value) => value <= 1000); // ignore numbers bigger than 1000
 
     // if any negative number in input
     let negativeNumbers = numbers.filter((num) => num < 0);

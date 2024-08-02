@@ -34,4 +34,8 @@ describe("String Calculator:add", () => {
     it("should throw an exception for multiple negative numbers", async () => {
         await expect(add("1,-2,-45")).rejects.toThrow("negatives not allowed: -2, -45");
     });
+
+    it("should ignore numbers bigger than 1000", async () => {
+        expect(await add("2,1001")).toBe(2);
+    });
 });
