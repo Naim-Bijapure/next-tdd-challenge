@@ -1,5 +1,10 @@
 "use server";
 
+/**
+ * @param {string} input - The input string containing numbers separated by commas or newlines.
+ * @returns {Promise<number>} - The sum of the numbers in the input string.
+ * @throws {Error} - Throws an error if the input contains negative numbers.
+ */
 export async function add(input: string): Promise<number> {
     // on false input value
     if (!input) return 0;
@@ -31,6 +36,10 @@ export async function add(input: string): Promise<number> {
     return 0;
 }
 
+/**
+ * @param {Array} arr - The input array of string from input string.
+ * @returns {Promise<number[]>} - Extracted numbers.
+ */
 function extractNumbers(arr: string[]): number[] {
     const result: number[] = [];
     let currentNumber = "";
