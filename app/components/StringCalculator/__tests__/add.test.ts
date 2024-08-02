@@ -38,4 +38,16 @@ describe("String Calculator:add", () => {
     it("should ignore numbers bigger than 1000", async () => {
         expect(await add("2,1001")).toBe(2);
     });
+
+    it("should supports delimiters of any length", async () => {
+        expect(await add("//[***]\n1***2***33")).toBe(36);
+    });
+
+    it("should supports multiple delimiters", async () => {
+        expect(await add("//[*][%]\n1*2%3")).toBe(6);
+    });
+
+    it("should supports multiple delimiters with length longer than one char", async () => {
+        expect(await add("//[***][%%%]\n1***2%%%3")).toBe(6);
+    });
 });
