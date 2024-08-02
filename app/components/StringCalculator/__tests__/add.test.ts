@@ -22,4 +22,8 @@ describe("String Calculator:add", () => {
     it("should handle new lines between numbers", async () => {
         expect(await add("1\n2,3")).toBe(6);
     });
+
+    it("should support different delimiters", async () => {
+        expect(await add("//;\n1;2")).toBe(3);
+    });
 });
