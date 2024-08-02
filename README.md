@@ -10,10 +10,10 @@
 
 - ✅ **TDD**: Implemented both frontend and backend with TDD.
 - 🪝 **[Live Deployment](https://docs.scaffoldeth.io/hooks/)**: On github push latest code gets deployed with vercel.
-- 🔥 **Github actions**: Once deployed code gets tested with github actions pipeline.
+- 🔥 **Github actions**: Once deployed code gets tested with github actions pipeline on cloud.
 
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+![tdd ui](https://github.com/user-attachments/assets/fca00c6b-16ef-4c1d-96c3-536e02137f7d)
 
 
 ## Requirements
@@ -42,7 +42,6 @@ yarn install
 yarn test:watch
 ```
 Command executes all tests in watch mode
-
 
 
 
