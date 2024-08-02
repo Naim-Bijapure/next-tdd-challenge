@@ -9,7 +9,7 @@
 ⚙️ Built using NextJS,Jest,React testing library , Vercel
 
 - ✅ **TDD**: Implemented both frontend and backend with TDD.
-- 🪝 **[Live Deployment](https://docs.scaffoldeth.io/hooks/)**: On github push latest code gets deployed with vercel.
+- 🪝 **[Live Deployment](https://next-tdd-challenge.vercel.app)**: On github push latest code gets deployed with vercel.
 - 🔥 **Github actions**: Once deployed code gets tested with github actions pipeline on cloud.
 
 
